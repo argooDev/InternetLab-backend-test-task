@@ -15,4 +15,4 @@ Route::post('/contact', function (StoreRequest $request) {
     $service->store($data);
     
     return redirect('/')->with('success', 'Сообщение отправлено!');
-});
+})->middleware('throttle:' . env('GLOBAL_RATE_LIMIT'));
