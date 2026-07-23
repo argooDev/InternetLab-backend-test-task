@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'yandex' => [
+        'folder_id' => env('YANDEX_FOLDER_ID'),
+        'api_key' => env('YANDEX_API_KEY'),
+        'model_uri' => env('YANDEX_MODEL_URI'),
+    ]
+
 ];

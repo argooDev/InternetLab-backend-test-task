@@ -6,7 +6,7 @@ use App\Models\Contact;
 
 class ContactRepository {
 
-    public function store($data){
+    public function store(array $data){
         Contact::create($data);
     }
 }

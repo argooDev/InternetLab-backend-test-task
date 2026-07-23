@@ -15,9 +15,13 @@ class UserContactCopy extends Mailable
     use Queueable, SerializesModels;
 
     public array $data;
-    public function __construct(array $data)
+    public string $sense;
+    public string $aiResponse;
+    public function __construct(array $data, string $sense, string $aiResponse)
     {
         $this->data = $data;
+        $this->sense = $sense;
+        $this->aiResponse = $aiResponse;
     }
 
     /**
